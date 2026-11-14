@@ -15,14 +15,22 @@ export default function FilterPanel({ filters, onChange }: FilterPanelProps): Re
   const [isExporting, setIsExporting] = useState(false);
 
   const countries = [
-    { code: "", label: "Global Network (All)" },
-    { code: "India", label: "India" },
-    { code: "Egypt", label: "Egypt" },
-    { code: "United States", label: "United States" },
-    { code: "China", label: "China" },
-    { code: "United Kingdom", label: "United Kingdom" },
-    { code: "Germany", label: "Germany" },
-  ];
+  { code: "", label: "Global Network (All)" },
+  { code: "India", label: "India" },
+  { code: "China", label: "China" },
+  { code: "Japan", label: "Japan" },
+  { code: "United Kingdom", label: "United Kingdom" },
+  { code: "France", label: "France" },
+  { code: "United States", label: "United States" },
+  { code: "Germany", label: "Germany" },
+  { code: "Brazil", label: "Brazil" },
+  { code: "Australia", label: "Australia" },
+  { code: "United Arab Emirates", label: "United Arab Emirates" },
+  { code: "Egypt", label: "Egypt" },
+  { code: "Singapore", label: "Singapore" },
+  { code: "South Korea", label: "South Korea" },
+  { code: "Mexico", label: "Mexico" },
+];
 
   const handleCountrySelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     onChange({
