@@ -17,9 +17,14 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
         <div className="flex items-center justify-between pb-4 border-b border-[#21262d]">
           <div className="flex items-center gap-3">
             <span className="w-3 h-3 rounded-full bg-emerald-400 animate-pulse" />
-            <h2 className="text-base font-semibold text-white tracking-wide">
-              Air Quality Heatmap
-            </h2>
+            <div>
+              <p className="text-[10px] font-mono uppercase tracking-widest text-emerald-400">
+                INFOCREON INTERNSHIP
+              </p>
+              <h2 className="text-base font-semibold text-white tracking-wide">
+                Air Quality Heatmap
+              </h2>
+            </div>
           </div>
           <button
             onClick={onClose}
@@ -31,9 +36,45 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
 
         {/* Content Body */}
         <div className="mt-5 space-y-5 text-xs text-gray-300 leading-relaxed max-h-[70vh] overflow-y-auto pr-2">
+          {/* Developer & PoC Metadata Card */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-3.5 rounded-lg bg-[#161b22] border border-[#30363d]">
+            <div>
+              <span className="text-[10px] font-mono uppercase tracking-wider text-gray-400 block">
+                ARCHITECT / DEVELOPER
+              </span>
+              <span className="text-sm font-semibold text-white">
+                Shithin P S
+              </span>
+            </div>
+            <div>
+              <span className="text-[10px] font-mono uppercase tracking-wider text-gray-400 block">
+                POC ID &amp; GITHUB
+              </span>
+              <span className="text-sm font-semibold text-emerald-400">
+                POC-32 (@shithinps)
+              </span>
+            </div>
+            <div>
+              <span className="text-[10px] font-mono uppercase tracking-wider text-gray-400 block">
+                PROGRAM &amp; BATCH
+              </span>
+              <span className="text-sm font-semibold text-emerald-400">
+                Infocreon Internship (Batch 8)
+              </span>
+            </div>
+            <div>
+              <span className="text-[10px] font-mono uppercase tracking-wider text-gray-400 block">
+                ENGINEERING STACK
+              </span>
+              <span className="text-sm font-medium text-gray-200">
+                Next.js, FastAPI, Tailwind CSS, MapLibre GL
+              </span>
+            </div>
+          </div>
+
           <div>
             <h3 className="text-emerald-400 font-mono uppercase tracking-wider text-[11px] mb-1">
-              01. Purpose & Health Impact
+              01. Purpose &amp; Health Impact
             </h3>
             <p>
               Fine particulate matter (PM2.5 and PM10) penetrates deep into lung tissue and enters the bloodstream. Sustained exposure exceeding WHO guidelines poses critical cardiovascular and respiratory hazards. This platform translates raw telemetry into actionable geographic intelligence to identify high-risk exposure zones in real time.
@@ -42,7 +83,7 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
 
           <div>
             <h3 className="text-emerald-400 font-mono uppercase tracking-wider text-[11px] mb-1">
-              02. Network Architecture & Governance
+              02. Network Architecture &amp; Governance
             </h3>
             <p>
               Telemetry across 1,800 active monitoring nodes is ingested from validated global environmental aggregators, national environmental protection agencies, and open-sensor networks. Telemetry is geocoded and served via a FastAPI backend feeding a MapLibre geospatial frontend.
@@ -51,7 +92,7 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
 
           <div>
             <h3 className="text-emerald-400 font-mono uppercase tracking-wider text-[11px] mb-2">
-              03. AQI Classification & Operational Decision Protocol
+              03. AQI Classification &amp; Operational Decision Protocol
             </h3>
             <div className="grid grid-cols-2 gap-2 font-mono text-[10px]">
               <div className="p-2.5 rounded bg-[#161b22] border border-emerald-500/30">
@@ -75,9 +116,9 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
         </div>
 
         {/* Footer */}
-        <div className="mt-6 pt-3 border-t border-[#21262d] flex justify-between items-center text-[10px] font-mono text-gray-500">
-          <span>Real Rails Batch 8 — Engineering PoC 32</span>
-          <span>FastAPI + Next.js + MapLibre GL</span>
+        <div className="mt-6 pt-3 border-t border-[#21262d] flex justify-between items-center text-[10px] font-mono text-gray-400">
+          <span>Developed by: Shithin P S | POC-32 | @shithinps</span>
+          <span>Infocreon Internship</span>
         </div>
       </div>
     </div>
