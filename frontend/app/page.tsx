@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
@@ -37,7 +37,7 @@ export default function Home() {
   useEffect(() => {
     setMounted(true);
 
-    fetch("http://127.0.0.1:8000/api/stats")
+    fetch(`${process.env.NEXT_PUBLIC_API_URL || "https://poc32-backend.onrender.com"}/api/stats`)
       .then((res) => res.json())
       .then((data) => {
         if (data && data.total_stations) {
@@ -51,7 +51,7 @@ export default function Home() {
   const handleFilterChange = (newFilters: any) => {
     setFilters(newFilters);
     if (newFilters.country && newFilters.country !== "All") {
-      fetch(`http://127.0.0.1:8000/api/stations?country=${encodeURIComponent(newFilters.country)}`)
+      fetch(`${process.env.NEXT_PUBLIC_API_URL || "https://poc32-backend.onrender.com"}/api/stations?country=${encodeURIComponent(newFilters.country)}`)
         .then((res) => res.json())
         .then((resData) => {
           if (resData?.data && resData.data.length > 0) {

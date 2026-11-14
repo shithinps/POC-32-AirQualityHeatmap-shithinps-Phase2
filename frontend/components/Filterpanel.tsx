@@ -34,7 +34,7 @@ export default function FilterPanel({ filters, onChange }: FilterPanelProps): Re
   const handleExportCSV = async () => {
     setIsExporting(true);
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/geojson");
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "https://poc32-backend.onrender.com"}/api/geojson`);
       const data = await res.json();
 
       let features = data.features || [];

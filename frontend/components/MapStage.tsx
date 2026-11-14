@@ -66,7 +66,7 @@ export default function MapStage({
       if (!map.current) return;
 
       try {
-        const res = await fetch("http://127.0.0.1:8000/api/geojson");
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "https://poc32-backend.onrender.com"}/api/geojson`);
         const geojsonData = await res.json();
         geojsonRef.current = geojsonData;
 
