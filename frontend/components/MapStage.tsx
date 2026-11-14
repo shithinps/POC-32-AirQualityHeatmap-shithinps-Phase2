@@ -209,7 +209,7 @@ export default function MapStage({
 
   // Fly to country and filter features when country selection changes
   useEffect(() => {
-    if (!map.current || !map.current.isStyleLoaded()) return;
+    if (!map.current) return;
     if (!map.current.getLayer("air-quality-point") || !map.current.getLayer("air-quality-heat")) return;
 
     const country = filters?.country;
